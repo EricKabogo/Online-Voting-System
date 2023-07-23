@@ -8,35 +8,11 @@
     <link rel="stylesheet" href="css/candidatestyle.css">
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #5358C6;">
-            <a class="navbar-brand" href="#" >
-                <img src="images/strath-logo.png" alt="" width="150" height="70">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="landing.php">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="candidates.php">Candidates</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="login.php">Sign in<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="registration.php">Sign up</a>
-                    </li>
-
-                     <div class="heading">
+        <div class="menu">
+            <div class="heading">
                         <h1>Candidates</h1>
                         <h3>&mdash;VOTE&mdash;</h3>
-                     </div>
-                </ul>
             </div>
-        </nav>
 
         <div class="candidate">
             <img src="images/icon.jpeg">
