@@ -20,7 +20,7 @@
                         <a class="nav-link" href="landing.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link " href="candidates.html">Candidates</a>
+                        <a class="nav-link " href="candidates.php">Candidates</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link " href="login.php">Sign in</a>
