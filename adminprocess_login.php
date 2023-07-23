@@ -23,7 +23,7 @@ if (isset($_POST['Uname']) && isset($_POST['Password'])) {
 	    exit();
 	}
   else{
-		//$pass = md5($pass);
+		$pass = md5($pass);
 		$sql = "SELECT * FROM admins WHERE username='$uname' AND password='$pass'";
 
 		$result = mysqli_query($conn, $sql);

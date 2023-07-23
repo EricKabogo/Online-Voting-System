@@ -7,18 +7,20 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand" href="index.html" style="color: #642CA9; font-weight: bold;">SC Voting Sytem</a>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #5358C6;">
+      <a class="navbar-brand" href="#" >
+        <img src="images/strath-logo.png" alt="" width="150" height="70">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="php/landing.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="landing.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link " href="candidates.html">Candidates</a>
+            <a class="nav-link " href="candidates.php">Candidates</a>
           </li>
           <li class="nav-item active">
              <a class="nav-link " href="login.php">Sign in</a>
