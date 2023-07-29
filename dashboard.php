@@ -54,7 +54,7 @@ if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
 	<div class="row gx-30">
 	<div class="col-sm-4 coloverlay " style="background-color:rgba(230, 218, 230, 0.785) ;  height: 350px;">
 		<h2>STRATHMORE ONLINE VOTING MODULE</h2>
-		<a href="candidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Veiw Candidates</a>
+		<a href="candidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">View Candidates</a>
 	</div>
 	<div class="col-sm-8 offset-3 ">
 		<img src="images/vote3.jpg" alt=""   width="1039px" height="530px">
