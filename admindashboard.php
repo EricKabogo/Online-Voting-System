@@ -63,7 +63,7 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['name'])) {
   <div class="row gx-30">
     <div class="col-sm-4 coloverlay " style="background-color:rgba(230, 218, 230, 0.785) ;  height: 350px;">
       <h2>Candidates</h2>
-      <a href="candidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Veiw Candidates</a>
+      <a href="candidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">View Candidates</a>
       <a href="regcandidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Register Candidates</a>
     </div>
     <div class="col-sm-8 offset-3 ">
