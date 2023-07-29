@@ -15,7 +15,7 @@ if (isset($_POST['Uname']) && isset($_POST['Password'])) {
 	$pass = validate($_POST['Password']);
 
 	if (empty($uname)) {
-		header("Location: adminlogin.php?error=Username is required");
+		header("Location: adminlogin.php?error=Admin ID is required");
 	    exit();
 	}
   else if(empty($pass)){
@@ -23,26 +23,26 @@ if (isset($_POST['Uname']) && isset($_POST['Password'])) {
 	    exit();
 	}
   else{
-		$pass = md5($pass);
-		$sql = "SELECT * FROM admins WHERE username='$uname' AND password='$pass'";
+		//$pass = md5($pass);
+		$sql = "SELECT * FROM admin WHERE admin_id='$uname' AND password='$pass'";
 
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) === 1) {
 			$row = mysqli_fetch_assoc($result);
-        if ($row['username'] === $uname && $row['password'] === $pass) {
-          $_SESSION['username'] = $row['username'];
-        	$_SESSION['ID'] = $row['ID'];
+        if ($row['admin_id'] === $uname && $row['password'] === $pass) {
+          $_SESSION['name'] = $row['name'];
+        	$_SESSION['admin_id'] = $row['admin_id'];
         	header("Location: admindashboard.php");
 		      exit();
         }
         else{
-		      header("Location: adminlogin.php?error=Incorect User name or password");
+		      header("Location: adminlogin.php?error=Incorect Admin Id or password");
           exit();
 	      }
 		}
     else{
-			header("Location: adminlogin.php?error=Incorect User name or password");
+			header("Location: adminlogin.php?error=Incorect Admin ID or password");
       exit();
 		}
 	}

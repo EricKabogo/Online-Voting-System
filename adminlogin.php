@@ -40,8 +40,8 @@
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<label>Username</label>
-     	<input type="text" name="Uname" placeholder="Username"><br>
+     	<label>Admin ID</label>
+     	<input type="text" name="Uname" placeholder="Admin ID"><br>
 
      	<label>Password</label>
      	<input type="password" name="Password" placeholder="Password"><br>
