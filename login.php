@@ -41,10 +41,10 @@
                 <p class="error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
             <label>Student ID</label>
-            <input type="text" name="Id" placeholder="National ID"><br>
+            <input type="text" name="Studentid" placeholder="Student ID"><br>
 
             <label>Password</label>
-            <input type="password" name="Pass" placeholder="Password"><br>
+            <input type="password" name="Password" placeholder="Password"><br>
 
             <button type="submit">Login</button>
                 <a href="registration.php" class="ca">Register as a Voter</a>

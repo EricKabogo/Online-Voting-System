@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="landing.php">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="landing.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link " href="candidates.php">Candidates</a>
+                        <a class="nav-link " href="candidates.php">Candidates<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link " href="login.php">Sign in</a>

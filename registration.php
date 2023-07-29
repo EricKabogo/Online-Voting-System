@@ -44,6 +44,13 @@
                 <p class="success"><?php echo $_GET['success']; ?></p>
             <?php } ?>
 
+            <label>Student ID</label>
+            <?php if (isset($_GET['studentId'])) { ?>
+                <input type="text" name="studentId" placeholder="Student ID" value="<?php echo $_GET['studentId']; ?>"><br>
+            <?php }else{ ?>
+                <input type="text" name="studentId" placeholder="Student ID"><br>
+            <?php }?>
+
             <label>Name</label>
             <?php if (isset($_GET['name'])) { ?>
                 <input type="text" name="name" placeholder="Name" value="<?php echo $_GET['name']; ?>"><br>
@@ -51,16 +58,16 @@
                 <input type="text" name="name" placeholder="Name"><br>
             <?php }?>
 
-            <label>Student ID</label>
-            <?php if (isset($_GET['uname'])) { ?>
-                <input type="text" name="uname" placeholder="Username" value="<?php echo $_GET['uname']; ?>"><br>
+            <label>Email</label>
+            <?php if (isset($_GET['email'])) { ?>
+                <input type="text" name="email" placeholder="Email" value="<?php echo $_GET['email']; ?>"><br>
             <?php }else{ ?>
-                <input type="text" name="uname" placeholder="Username"><br>
+                <input type="text" name="email" placeholder="Email"><br>
             <?php }?>
 
 
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Password"><br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password"><br>
 
             <label>Re Password</label>
             <input type="password" name="re_password" placeholder="Re_Password"><br>
