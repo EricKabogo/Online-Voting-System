@@ -57,7 +57,7 @@
 <div class="container-fluid">
     <div class="row ">
         <div class="col-sm-12" style=" background-color: black; margin: 50px 0px 0px 0px; color: #ffffff;">
-            <p class="text-center">Copyright@2022-Strathmore University</p>
+            <p class="text-center">Copyright@2023-Strathmore University</p>
         </div>
     </div>
 </div>
