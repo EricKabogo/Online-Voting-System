@@ -51,7 +51,7 @@
                     <!-- <h5 class="course"> BCOM </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
                     <!-- <h5 class="course"> BBIT </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
             </div>
         </div>
 
@@ -75,7 +75,7 @@
                     <!-- <h5 class="course"> BICS </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                     <!-- <h5 class="course"> BCOM </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
             </div>
         </div>
 
@@ -103,7 +103,7 @@
                     <!-- <h5 class="course"> BLLS </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
             </div>
         </div>
 
@@ -115,7 +115,18 @@
                     <!-- <h5 class="course"> sh1100 </h5> -->
                 </div>
                 <p>I candidate</p>
-                <button>Vote</button>
+                <button>View Full Manifesto</button>
+            </div>
+        </div>
+    </div>
+    <div class="heading2">
+        <h5>Vote for your choice Candidates</h5>
+        <a class="nav-link2" href="voting.php"><button>Here</button></a>
+    </div>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-12" style=" background-color: black; margin: 50px 0px 0px 0px; color: #ffffff;">
+                <p class="text-center">Copyright@2023-Strathmore University</p>
             </div>
         </div>
     </div>

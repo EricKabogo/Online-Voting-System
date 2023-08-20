@@ -82,3 +82,22 @@ body{
 .details>button:hover{
     opacity: .7;
 }
+.heading2{
+    background-color: #2d3436;
+    color: #ffffff;
+    padding: 60px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.nav-link2>button{
+    background-color: white;
+    border: none;
+    color: blue;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+.nav-link2>button:hover{
+    opacity: .7;
+}

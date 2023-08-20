@@ -1,0 +1,39 @@
+form{
+    width: 75%;
+    border: 2px solid lightgrey;
+    padding: 30px;
+    background: #F9F6EE;
+    border-radius:  15px;
+    text-align: left;
+    margin: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input{
+    width: -webkit-fill-available;
+}
+
+input[type="radio"], [type="checkbox"]{
+    width: auto;
+}
+
+h2{
+    text-align: center;
+}
+
+h4{
+    font-size: medium;
+}
+
+button{
+    background-color: #56AEFF;
+    font-weight: bold;
+    border: white;
+    border-radius:  25px;
+}
