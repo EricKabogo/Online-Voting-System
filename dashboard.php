@@ -1,10 +1,3 @@
-<?php
-session_start();
-
-if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,12 +30,10 @@ if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
             <a class="nav-link " href="candidates.php">Candidates</a>
           </li>
           <li class="nav-item active">
-             <a class="nav-link" href="logout.php">Logout</a>
-           </li>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <li class="nav-item active">
-            <a class="nav-link" href="profile.php" style="background: white; padding: 10px 15px; color: red; border-radius: 5px; margin-right: 10px; border: none; font-weight: bold;">
-              Welcome, <?php echo $_SESSION['name']; ?></a>
+            <a class="nav-link " href="login.php">Sign in</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="registration.php">Sign up</a>
           </li>
         </ul>
       </div>
@@ -54,7 +45,7 @@ if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
 	<div class="row gx-30">
 	<div class="col-sm-4 coloverlay " style="background-color:rgba(230, 218, 230, 0.785) ;  height: 350px;">
 		<h2>STRATHMORE ONLINE VOTING MODULE</h2>
-		<a href="candidates.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">View Candidates</a>
+		<a href="login.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Get Started</a>
 	</div>
 	<div class="col-sm-8 offset-3 ">
 		<img src="images/vote3.jpg" alt=""   width="1039px" height="530px">
@@ -66,7 +57,7 @@ if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
 <div class="container-fluid">
     <div class="row ">
         <div class="col-sm-12" style=" background-color: black; margin: 50px 0px 0px 0px; color: #ffffff;">
-            <p class="text-center">Copyright@2022-Strathmore University</p>
+            <p class="text-center">Copyright@2023-Strathmore University</p>
         </div>
     </div>
 </div>
@@ -76,11 +67,3 @@ if (isset($_SESSION['student_id']) && isset($_SESSION['name'])) {
 integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php
-}
-else{
-  header("Location: login.php");
-  exit();
-}
-?>

@@ -33,7 +33,7 @@ if (isset($_POST['Uname']) && isset($_POST['Password'])) {
         if ($row['admin_id'] === $uname && $row['password'] === $pass) {
           $_SESSION['name'] = $row['name'];
         	$_SESSION['admin_id'] = $row['admin_id'];
-        	header("Location: admindashboard.php");
+        	header("Location: Admin/dashboard.php");
 		      exit();
         }
         else{

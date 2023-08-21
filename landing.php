@@ -41,7 +41,7 @@
   </div>
 
 <!-- Midpart -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="row gx-30">
 	<div class="col-sm-4 coloverlay " style="background-color:rgba(230, 218, 230, 0.785) ;  height: 350px;">
 		<h2>STRATHMORE ONLINE VOTING MODULE</h2>
@@ -51,6 +51,18 @@
 		<img src="images/vote3.jpg" alt=""   width="1039px" height="530px">
 	</div>
 </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row gx-30">
+    <div class="col-sm-8" style="margin-top: 50px;">
+      <img src="images/vote3.jpg" alt="" width="100%" height="auto">
+    </div>
+    <div class="col-sm-4 coloverlay" style="background-color:rgba(230, 218, 230, 0.785); height: 350px;">
+      <h2>STRATHMORE ONLINE VOTING MODULE</h2>
+      <a href="login.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Get Started</a>
+    </div>
+  </div>
 </div>
 
 <!-- footer -->
