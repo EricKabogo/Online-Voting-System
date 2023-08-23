@@ -18,7 +18,6 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
 
 <body>
  <!-- Navbar -->
-
   <nav class="navbar navbar-expand-lg " style="background-color: #5358C6;">
      <div class="container-fluid">
       <a class="navbar-brand" href="#" >
@@ -29,10 +28,10 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item">
-          <div class="form">
-         <p>Hey, <?php echo $_SESSION['username']; ?>!</p> 
-        </div>
+          <li class="nav-item">
+            <div class="form">
+              <p>Hey, <?php echo $_SESSION['name']; ?>!</p> 
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link active navlinks" aria-current="page" href="Register_Admin.php">Register Admin</a>
@@ -40,17 +39,15 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
           <li class="nav-item">
             <a class="nav-link active navlinks" href="Register_candidates.php">Register Candidates</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active navlinks" aria-current="page" href="Register_voters.php">Register Voters</a>
-          </li>
-          
+        </ul>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
           <li class="navoverlay ">
-            <a class=" btn btn-danger active" href="admin_logout.php" >Log Out</a>
+            <a class=" btn btn-danger active" href="..\logout.php" >Log Out</a>
           </li>
         </ul>
       </div>
-     </div>
- </nav>
+    </div>
+  </nav>
     
 <div class="row" style="height: 650px;">
      <div class="col-sm-1 vertical" >
@@ -84,19 +81,19 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
         <table class="table table-bordered table-hover">
          <tr>
             <th>ID</th>
-            <th>User-name</th>
+            <th>Name</th>
             <th>Email</th>
          </tr>
          <?php 
-         require("DB_connect.php");
+         require("..\db_conn.php");
          $sql="SELECT * FROM admin";
          $result=$conn->query($sql);
 
          if($result->num_rows > 0){
             while($row=$result->fetch_assoc()){
-              echo"<tr><td>".$row["id"]."</td><td>"
-                             .$row["username"]."</td><td>"
-                             .$row["email"]."</td><td>";
+              echo"<tr><td>".$row["admin_id"]."</td><td>"
+                             .$row["name"]."</td><td>"
+                             .$row["email"]."</td>";
 
             }
          }else{
@@ -115,23 +112,23 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
          <table class="table table-bordered table-hover">
           <tr>
             <th>ID</th>
-            <th>First-name</th>
-            <th>Second-name</th>
-            <th>Position</th>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Position ID</th>
 
             
           </tr>
           <?php 
-          require("DB_connect.php");
+          require("..\db_conn.php");
           $sql="SELECT * FROM 'candidates' ";
           $result=$conn->query($sql);
 
           if($result !==false && $result->num_rows > 0){
             while($row=$result->fetch_assoc()){
               echo"<tr><td>".$row["candidate_id"]."</td><td>"
-                             .$row["fname"]."</td><td>"
-                             .$row["sname"]."</td><td>"
-                             .$row["position"]."</td><td>";
+                             .$row["name"]."</td><td>"
+                             .$row["student_id"]."</td><td>"
+                             .$row["position_id"]."</td>";
 
               }
           }else{
@@ -149,21 +146,21 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
            <table class="table table-bordered table-hover">
             <tr>
               <th>ID</th>
-              <th>First-name</th>
-              <th>Second-name</th>
+              <th>Name</th>
+              <th>Email</th>
 
             
             </tr>
             <?php 
-            require("DB_connect.php");
-            $sql="SELECT * FROM voter";
+            require("..\db_conn.php");
+            $sql="SELECT * FROM students";
             $result=$conn->query($sql);
 
             if($result->num_rows > 0){
              while($row=$result->fetch_assoc()){
               echo"<tr><td>".$row["voter_id"]."</td><td>"
-                             .$row["fname"]."</td><td>"
-                             .$row["sname"]."</td><td>";
+                             .$row["name"]."</td><td>"
+                             .$row["email"]."</td>";
 
               }
             }else{

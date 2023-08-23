@@ -15,9 +15,8 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
 </head>
 <body>
  <!-- Navbar -->
-
  <nav class="navbar navbar-expand-lg " style="background-color: #5358C6;">
-    <div class="container-fluid">
+     <div class="container-fluid">
       <a class="navbar-brand" href="#" >
         <img src="../images/strath-logo.png" alt="" width="120" height="70">
       </a>
@@ -26,10 +25,10 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item">
-          <div class="form">
-         <p>Hey, <?php echo $_SESSION['username']; ?>!</p> 
-        </div>
+          <li class="nav-item">
+            <div class="form">
+              <p>Hey, <?php echo $_SESSION['name']; ?>!</p> 
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link active navlinks" aria-current="page" href="Register_Admin.php">Register Admin</a>
@@ -37,12 +36,10 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
           <li class="nav-item">
             <a class="nav-link active navlinks" href="Register_candidates.php">Register Candidates</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active navlinks" aria-current="page" href="Register_voters.php">Register Voters</a>
-          </li>
-          
+        </ul>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
           <li class="navoverlay ">
-            <a class=" btn btn-danger active" href="admin_logout.php" >Log Out</a>
+            <a class=" btn btn-danger active" href="..\logout.php" >Log Out</a>
           </li>
         </ul>
       </div>
@@ -77,8 +74,8 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
     </div>
     <div class="col-sm-3 offset-1">
     <div class="form">
-        <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
-        <p><a href="admin_logout.php">Logout</a></p>
+        <p>Hey, <?php echo $_SESSION['name']; ?>!</p>
+        <p><a href="..\logout.php">Logout</a></p>
     </div>
     </div>
   </div>

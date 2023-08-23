@@ -22,10 +22,10 @@ if (isset($_POST['choice1']) && isset($_POST['choice2'])
 
 
 	if(empty($sport)){
-        header("Location: organForm.php?error=Select a sport representative candidate.");
+        header("Location: organForm.php?error=Select a Sport representative candidate.");
 	    exit();
 	}
-  else if(empty($fin)){
+    else if(empty($fin)){
         header("Location: organForm.php?error=Select a Finance representative candidate.");
 	    exit();
 	}
@@ -37,25 +37,25 @@ if (isset($_POST['choice1']) && isset($_POST['choice2'])
         header("Location: organForm.php?error=Select a Student Council President candidate.");
 	    exit();
 	}
-  else if(empty($term)){
+    else if(empty($term)){
         header("Location: organForm.php?error=Confirm the checkbox at the end of the form.");
 	    exit();
 	}
 
 	else{
-       $sql2 = "INSERT INTO organform(FirstName, LastName, Email, PhoneNumber, County, Subcounty, Occupation, transplant, Illness, Drugs, Injury)
+        $sql2 = "INSERT INTO organform(FirstName, LastName, Email, PhoneNumber, County, Subcounty, Occupation, transplant, Illness, Drugs, Injury)
         VALUES('$fname', '$lname', '$mail', '$numb', '$county', '$sub', '$occup', '$sport', '$fin', '$academy', '$pres')";
-         $result2 = mysqli_query($conn, $sql2);
-         if ($result2) {
-         	 header("Location: voting.php?success=You have successfully cast your vote.");
-         exit();
-         }
-         else {
+        $result2 = mysqli_query($conn, $sql2);
+        if ($result2) {
+         	header("Location: voting.php?success=You have successfully cast your vote.");
+            exit();
+        }
+        else {
            	header("Location: voting.php?error=unknown error occurred");
 	        exit();
         }
-		}
 	}
+}
 
 else{
 	header("Location: voting.php");

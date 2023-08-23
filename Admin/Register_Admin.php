@@ -16,20 +16,19 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
 <body>
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg " style="background-color: #5358C6;">
-    <div class="container-fluid">
+     <div class="container-fluid">
       <a class="navbar-brand" href="#" >
         <img src="../images/strath-logo.png" alt="" width="120" height="70">
-
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item">
-          <div class="form">
-         <p>Hey, <?php echo $_SESSION['username']; ?>!</p> 
-        </div>
+          <li class="nav-item">
+            <div class="form">
+              <p>Hey, <?php echo $_SESSION['name']; ?>!</p> 
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link active navlinks" aria-current="page" href="Register_Admin.php">Register Admin</a>
@@ -37,20 +36,15 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
           <li class="nav-item">
             <a class="nav-link active navlinks" href="Register_candidates.php">Register Candidates</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active navlinks" aria-current="page" href="Register_voters.php">Register Voters</a>
-          </li>
-          
-          
-          <li class="navoverlay ">
-            <a class="btn btn-danger active" href="admin_logout.php" >Log Out</a>
-          </li>
-          
         </ul>
-        
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
+          <li class="navoverlay ">
+            <a class=" btn btn-danger active" href="..\logout.php" >Log Out</a>
+          </li>
+        </ul>
       </div>
     </div>
-    </nav>
+  </nav>
 <div class="row" style="height: 616px;">
   <div class="col-sm-2 vertical" >
     <nav class ="navbar ">
@@ -80,31 +74,28 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
 <!-- Register Form Area -->
 <!-- phpcode -->
 <?php
-    require('DB_connect.php');
+    require('..\db_conn.php');
     // When form submitted, insert values into the database.
-    if (isset($_REQUEST['username'])) {
+    if (isset($_POST['id']) && isset($_POST['password'])
+        && isset($_POST['email']) && isset($_POST['Uname'])) {
         // removes backslashes
-        $username = stripslashes($_REQUEST['username']);
-        //escapes special characters in a string
+        $adminid = stripslashes($_POST['id']);
+        $adminid = mysqli_real_escape_string($conn, $adminid);
+        $username = stripslashes($_POST['Uname']);
         $username = mysqli_real_escape_string($conn, $username);
-        $email    = stripslashes($_REQUEST['email']);
+        $email    = stripslashes($_POST['email']);
         $email    = mysqli_real_escape_string($conn, $email);
-        $password = stripslashes($_REQUEST['password']);
+        $password = stripslashes($_POST['password']);
         $password = mysqli_real_escape_string($conn, $password);
-        $create_datetime = date("Y-m-d H:i:s");
-        $query    = "INSERT into `admin` (username, password, email, create_datetime)
-                     VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
+
+        $query    = "INSERT into `admin` (admin_id, name, password, email)
+                     VALUES ('$adminid', '$username', '" . md5($password) . "', '$email')";
         $result   = mysqli_query($conn, $query);
         if ($result) {
-            // echo "<div class='form'>
-            //       <h3>Admin registered successfully.</h3><br/>
-            //       </div>";
-            header('Location: Register_Admin.php');
+          header('Location: Register_Admin.php?success=New Admin has been registered successfully');
+          exit();
         } else {
-            echo "<div class='form'>
-                  <h3>Required fields are missing.</h3><br/>
-                  <p class='link'>Try  again.</p>
-                  </div>";
+          header('Location: Register_Admin.php?success=Please Fill in all Fields');
         }
     } else {
 ?>
@@ -114,10 +105,22 @@ integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmV
                 <div class="login-form ">
                     <form name="login"  action="" method="post" class="m-3">
                         <h3>Register Admin</h3>
+                        <?php if (isset($_GET['error'])) { ?>
+                          <p class="error"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        <?php if (isset($_GET['success'])) { ?>
+                          <p class="success"><?php echo $_GET['success']; ?></p>
+                        <?php } ?>
+
                         <div class="form-group">
-                            <label>Username</label> <input type="text"
+                            <label>Admin ID</label> <input type="text"
                                 class="form-control mt-1 mb-3"
-                                placeholder="Username" name="username">
+                                placeholder="Admin ID" name="id">
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label> <input type="text"
+                                class="form-control mt-1 mb-3"
+                                placeholder="Name" name="Uname">
                         </div>
                         <div class="form-group">
                             <label>Email Address</label> <input type="email"

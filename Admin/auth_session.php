@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if(!isset($_SESSION["username"])) {
-        header("Location: admin_login.php");
+    if(!isset($_SESSION["name"])) {
+        header("Location: C:\xampp\htdocs\Online-Voting-System\adminlogin.php");
         exit();
     }
 ?>

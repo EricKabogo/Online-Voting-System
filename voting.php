@@ -50,20 +50,20 @@
 
             
         <h4>Select your chosen Sports Representative</h4>
-            <input type="radio" id="organ" name="choice1" value="Candidate1"> Frank<br>
-            <input type="radio" id="organ" name="choice1" value="candidate2"> Sophia<br><br><br>
+            <input type="radio" id="sport" name="choice1" value="Candidate1"> Frank<br>
+            <input type="radio" id="sport" name="choice1" value="Candidate2"> Sophia<br><br><br>
 
         <h4>Select your chosen Finance Representative</h4>
-            <input type="radio" id="organ" name="choice2" value="Candidate1"> Gideon<br>
-            <input type="radio" id="organ" name="choice2" value="candidate2"> Esther<br><br><br>
+            <input type="radio" id="finance" name="choice2" value="Candidate1"> Gideon<br>
+            <input type="radio" id="finance" name="choice2" value="Candidate2"> Esther<br><br><br>
 
         <h4>Select your chosen Academic Representative</h4>
-            <input type="radio" id="organ" name="choice3" value="Candidate1"> Fred<br>
-            <input type="radio" id="organ" name="choice3" value="candidate2"> Jane<br><br><br>
+            <input type="radio" id="academic" name="choice3" value="Candidate1"> Fred<br>
+            <input type="radio" id="academic" name="choice3" value="Candidate2"> Jane<br><br><br>
 
         <h4>Select your chosen Student Council Representative</h4>
-            <input type="radio" id="organ" name="choice4" value="Candidate1"> Ian<br>
-            <input type="radio" id="organ" name="choice4" value="candidate2"> Joy<br><br><br>
+            <input type="radio" id="council" name="choice4" value="Candidate1"> Ian<br>
+            <input type="radio" id="council" name="choice4" value="Candidate2"> Joy<br><br><br>
 
         <input type="checkbox" id="terms" name="choice"> I am sure of my votes and know they can't be changed once submitted.<br><br>
 
